@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>function clothingAdvice(temperature, isRaining) {
+        if (isRaining) {
+            return "It's raining! You should wear a raincoat and take an umbrella.";
+        } else {
+            if (temperature < 0) {
+                return "It's freezing! Wear warm clothes, like a winter coat and gloves.";
+            } else if (temperature >= 0 && temperature <= 15) {
+                return "It's cool! A sweater or a light jacket should be enough.";
+            } else if (temperature > 15 && temperature <= 25) {
+                return "It's mild! A t-shirt and jeans would be comfortable.";
+            } else {
+                return "It's warm! Dress in light clothing like shorts and a t-shirt.";
+            }
+        }
+    }
+    
+    // Get user input for temperature
+    let tempInput = prompt("Enter the current temperature in degrees Celsius:");
+    let temperature = parseFloat(tempInput);
+    
+    // Get user input for rain status
+    let rainInput = prompt("Is it raining? (yes/no):");
+    let isRaining = rainInput.toLowerCase() === 'yes';
+    
+    // Get clothing advice
+    let advice = clothingAdvice(temperature, isRaining);
+    console.log(advice);
+    </script>
+</body>
+</html>
